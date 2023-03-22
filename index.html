@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Xi CHEN (陈汐)</title>
+
+  <meta name="author" content="Xi Chen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/jpg" href="images/hku_icon.jpeg">
+
+  <script type="text/javascript">
+
+    function display(id) {
+      var traget = document.getElementById(id);
+      if (traget.style.display == "none") {
+        traget.style.display = "";
+      } else {
+        traget.style.display = "none";
+      }
+    }  
+  </script>
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Xi CHEN<img style="max-height:30px;vertical-align: middle;"
+                        src="images/chinese_name.png" /></name>
+
+                  </p>
+                  <p>
+                    I am a first-year Ph.D. student at the University of Hong Kong, supervised by Prof. <a
+                    href="https://hszhao.github.io/">Hengshuang Zhao</a>.
+
+                    Before joining HKU, I worked as a senior algorithm engineer at Alibaba Group.
+                    Previously, I got the Master degree at Zhejiang University in 2020. 
+                    <!--supervised by Prof.  <a
+                    href="https://person.zju.edu.cn/qidonglian/">Donglian Qi</a> and Prof.  <a
+                    href="https://mypage.zju.edu.cn/jxs/">Jianxin Shen</a>.  -->
+                    I also got a double master diploma at Ecole Centrale de Marseille(France). 
+                    Before that, I received my B.Eng. from Zhejiang University in 2017. 
+                  </p>
+                  <p>
+                    My research interests lie in the field of deep learning and computer vision, I've published multiple research works for image/video segmentation, open-world learning.
+                    Now I have interests in AIGC. 
+                  </p>
+                  <p>
+                    Reach out to me over gmail: chauncey0620 for discussion or any visiting or internship opportunities. 
+                  </p>
+                
+                  <p>
+                    <!-- <font color="red">Update: On job market now! Drop me an email if you are interested.</font> -->
+                  </p>
+                  <p style="text-align:center">
+                    <a href="data/cv_chenxi_2023.3.pdf">CV</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com/citations?user=INISnXkAAAAJ&hl=en">Google Scholar</a>
+                    &nbsp/&nbsp
+                    <a href="https://github.com/XavierCHEN34">Github</a> &nbsp/&nbsp
+                    <a href="https://www.zhihu.com/people/xavierchen">Zhihu</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:40%;max-width:40%">
+                  <a href="images/photo-life.jpg"><img style="width:80%;max-width:80" alt="profile photo"
+                      src="images/photo-life.jpg" class="hoverZoomLink"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>News</heading>
+                  <ul>
+                    <li> <b>[Mar. 2023]</b> We release the manuscripts of 
+                      <a href="https://arxiv.org/abs/2303.11324">OPSNet</a> and 
+                      <a href="https://arxiv.org/abs/2303.11320">ScribbleSeg</a>.</li>
+                    <li> <b>[Mar. 2023]</b> One co-authored paper accepted to CVPR2023.</li>
+                    <li> <b>[Feb. 2022]</b> I join HKU as a PhD student. </li>
+                    <a onclick="return display('old_news');"> ---- show more ----</a>
+                    <div id="old_news" style="display: none;">
+                      <li> <b>[Mar. 2022]</b> One paper accepted to CVPR2022</li>
+                      <li> <b>[Jun. 2021]</b> One paper accepted to ICCV2021</li>
+                      <li> <b>[Jun. 2020]</b> I graduate from Zhejiang University and join Alibaba Group</li>
+                      <li> <b>[Mar. 2020]</b> One paper accepted to CVPR2020</li>
+
+                    </div>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Selected Publications (</heading><a href="https://xavierchen34.github.io/.github.io/papers">
+                    <heading>All Papers</heading>
+                  </a>
+                  <heading>)</heading>
+                  <p>
+                    <a href="https://scholar.google.com/citations?user=INISnXkAAAAJ&hl=en">Google Scholar</a> 
+                  </p>
+                  <p>
+                    (*: Equal contribution)
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/OPSNet.png' width="190">
+                    </div>
+                    <img src='images/OPSNet.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2303.11324">
+                    <papertitle>Open-vocabulary Panoptic Segmentation with Embedding Modulation</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Shuang Li, Ser-Nam Lim, Antonio Torralba, Hengshuang Zhao
+                  <br>
+                  <em>Manuscripts</em>, 2023
+
+                  <br>
+                  <a href="https://arxiv.org/abs/2303.11324">pdf</a>
+                  <p></p>
+                  <p>
+                    We present a omnipotent and efficient framework for open-vocabulary panoptic segmentation, which shows great performance
+                    for both closed- and open-vocabulary settings with limited training data.
+                  </p>
+                </td>
+              </tr>
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/scribbleseg.png' width="190">
+                    </div>
+                    <img src='images/scribbleseg.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2303.11320">
+                    <papertitle>ScribbleSeg: Scribble-based Interactive Image Segmentation</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Yau Shing Jonathan Cheung, Ser-Nam Lim, Hengshuang Zhao
+                  <br>
+                  <!--<em>ICML</em>, 2022 &nbsp <font color="red"><strong>(Spotlight)</strong></font> -->
+                  <em>Manuscripts</em>, 2023
+
+                  <br>
+                  <a href="https://arxiv.org/abs/2303.11320">pdf</a>
+                  <p></p>
+                  <p>
+                    We reformulate the task of scribble-based interactive image segmentation and propse: a pipeline, a training schema, an evaluation 
+                    protocol, and a benchmark.
+                  </p>
+                </td>
+              </tr>
+  
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/FocalClick.png' width="190">
+                    </div>
+                    <img src='images/FocalClick.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2204.02574">
+                    <papertitle>FocalClick: Towards Practical Interactive Image Segmentation</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Zhiyan Zhao, Yilei Zhang, Manni Duan, Donglian Qi, Hengshuang Zhao
+                  <br>
+                  <!--<em>ICML</em>, 2022 &nbsp <font color="red"><strong>(Spotlight)</strong></font> -->
+                  <em>CVPR</em>, 2022
+
+                  <br>
+                  <a href="https://arxiv.org/abs/2204.02574">pdf</a> /
+                  <a href="https://github.com/XavierCHEN34/ClickSEG">code</a>
+                  <p></p>
+                  <p>
+                    FocalClick is a simple and effective solution for interactive segmentation. It largely reduces the 
+                    computation for various models by focusing on target local regions.
+                  </p>
+                </td>
+              </tr>    
+
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/CDNet.png' width="190">
+                    </div>
+                    <img src='images/CDNet.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Conditional_Diffusion_for_Interactive_Segmentation_ICCV_2021_paper.pdf">
+                    <papertitle>Conditional Diffusion for Interactive Segmentation</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Zhiyan Zhao, Feiwu Yu, Yilei Zhang, Manni Duan
+                  <br>
+                  <!--<em>ICML</em>, 2022 &nbsp <font color="red"><strong>(Spotlight)</strong></font> -->
+                  <em>ICCV</em>, 2021
+
+                  <br>
+                  <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Conditional_Diffusion_for_Interactive_Segmentation_ICCV_2021_paper.pdf">pdf</a> /
+                  <a href="https://github.com/XavierCHEN34/ClickSEG">code</a>
+                  <p></p>
+                  <p>
+                    We view interactive segmentation as a diffusion procedure and design  feature- and pixel-level diffuion modules for more consistent predictions.
+                  </p>
+                </td>
+              </tr>    
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/sat.gif' width="190">
+                    </div>
+                    <img src='images/sat.gif' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2003.00482">
+                    <papertitle>State-Aware Tracker for Real-Time Video Object Segmentation</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Zuoxin Li, Ye Yuan, Gang Yu, Jianxin Shen, Donglian Qi
+                  <br>
+                  <!--<em>ICML</em>, 2022 &nbsp <font color="red"><strong>(Spotlight)</strong></font> -->
+                  <em>CVPR</em>, 2020
+
+                  <br>
+                  <a href="https://arxiv.org/abs/2003.00482">pdf</a> /
+                  <a href="https://github.com/megvii-research/video_analyst">code</a>
+                  <p></p>
+                  <p>
+                    We propose a novel pipeline called State-Aware Tracker (SAT), which can produce accurate segmentation results with real-time speed.
+                  </p>
+                </td>
+              </tr>   
+
+            </tbody>
+          </table>
+
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Projects & Resources</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/SiamFCOT.png' width="190">
+                    </div>
+                    <img src='images/SiamFCOT.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a>
+                    <papertitle>Siamese Fully Convolutional Object Tracking</papertitle>
+                  </a>
+                  <br>
+                  Weizhao Wang, Xinyu Chen,  <strong>Xi Chen</strong>, Yinda Xu, Zeyu Wang
+                  <br>
+                  <a href="https://ieeexplore.ieee.org/document/9022051">pdf</a> /
+                  <a href="http://data.votchallenge.net/vot2019/trackers/SiamFCOT-code-2019-06-09T16_22_25.118122.zip">code</a>
+                  <p></p>
+                  <p>
+                    Second place solution for VOT2019 real-time track. SiamFCOT serves as a string solution for real-time 
+                    single object tracking.
+                  </p>
+                </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Academic Service</heading>
+                  <p>
+                    <b>Reviewer / Program Committee Member</b>
+                  </p>
+                  <ul>
+                    <li> CVPR (2021, 2022, 2023)</li>
+                    <li> ICCV (2021, 2023)</li>
+                    <li> ECCV (2022)</li>
+                    <li> AAAI (2022)</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <script type='text/javascript' id='clustrmaps'
+                    src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=aBj-4SCzZBu24IVENbl19cAetpLjEP1RCaSORs6c7A8'></script>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:center;font-size:small;">
+                  Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's
+                    website</a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+  </table>
+</body>
+
+</html>
