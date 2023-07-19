@@ -105,6 +105,7 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <heading>News</heading>
                   <ul>
+                    <li> <b>[Jul. 2023]</b> We release <a href="https://damo-vilab.github.io/AnyDoor-Page/">AnyDoor</a>.</li>
                     <li> <b>[Jul. 2023]</b> OPSNet is accepted by ICCV2023.</li>
                     <li> <b>[Mar. 2023]</b> We release the manuscripts of 
                       <a href="https://arxiv.org/abs/2303.11324">OPSNet</a> and 
@@ -147,6 +148,45 @@
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/AnyDoor_teaser.jpg' width="190">
+                    </div>
+                    <img src='images/AnyDoor_teaser.jpg' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/pdf/2307.09481.pdf">
+                    <papertitle>AnyDoor: Zero-shot Object-level Image Customization</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Lianghua Huang, Yu Liu, Yujun Shen, Deli Zhao, Hengshuang Zhao 
+                  <br>
+                  <em>arxiv</em>, 2023
+
+                  <br>
+                  <a href="https://arxiv.org/pdf/2307.09481.pdf">pdf</a>/
+                  <a href="https://damo-vilab.github.io/AnyDoor-Page/">page</a>
+                  <p></p>
+                  <p>
+                    This work presents AnyDoor, a diffusion-based image generator with the power to 
+                    teleport target objects to new scenes at user-specified locations in a harmonious way. 
+                  </p>
+                </td>
+              </tr>
 
               <tr onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
