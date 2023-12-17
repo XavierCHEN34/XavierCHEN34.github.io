@@ -42,7 +42,7 @@
 
                   </p>
                   <p>
-                    I am a first-year Ph.D. student at the University of Hong Kong, supervised by Prof. <a
+                    I am a second-year Ph.D. student at the University of Hong Kong, supervised by Prof. <a
                     href="https://hszhao.github.io/">Hengshuang Zhao</a>.
 
                     Before joining HKU, I worked as a senior algorithm engineer at  
@@ -60,7 +60,7 @@
 
 
                   <p>
-                    My research interests lie in the field of deep learning and computer vision, I've published multiple research works for image/video segmentation, open-world learning.
+                    My research interests lie in the field of deep learning and computer vision, I've published multiple research works for image/video perception, open-world multi-modal learning.
                     Now I have interests in AIGC. 
                   </p>
 
@@ -105,7 +105,9 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <heading>News</heading>
                   <ul>
-                    <li> <b>[Jul. 2023]</b> We release <a href="https://damo-vilab.github.io/AnyDoor-Page/">AnyDoor</a>.</li>
+                    <li> <b>[Dec. 2023]</b> We release <a href="https://xavierchen34.github.io/LivePhoto-Page/">LivePhoto</a> for image-to-video generation. </li>
+                    <li> <b>[Dec. 2023]</b> The code of AnyDoor is released <a href="https://github.com/damo-vilab/AnyDoor">here</a>, we would continue to make it stronger. </li>
+                    <li> <b>[Jul. 2023]</b> We release <a href="https://damo-vilab.github.io/AnyDoor-Page/">AnyDoor</a> for zero-shot image composition & customization.</li>
                     <li> <b>[Jul. 2023]</b> OPSNet is accepted by ICCV2023.</li>
                     <li> <b>[Mar. 2023]</b> We release the manuscripts of 
                       <a href="https://arxiv.org/abs/2303.11324">OPSNet</a> and 
@@ -149,6 +151,47 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
+                      <img src='images/LivePhoto.gif' width="190">
+                    </div>
+                    <img src='images/LivePhoto.gif' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2312.02928">
+                    <papertitle>LivePhoto: Real Image Animation with Text-guided Motion Control</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Zhiheng Liu, Mengting Chen, Yutong Feng, Yu Liu, Yujun Shen, Hengshuang Zhao 
+                  <br>
+                  <em>arxiv</em>, 2023
+                  <br>
+                  <a href="https://arxiv.org/abs/2312.02928">pdf</a>/
+                  <a href="https://xavierchen34.github.io/LivePhoto-Page/">page</a>/
+                  <a href="https://github.com/XavierCHEN34/LivePhoto">code</a>/
+                  <a href="https://twitter.com/_akhaliq/status/1732224399414067333">media (AK)</a>
+                  <p></p>
+                  <p>
+                    We present LivePhoto, a real image animation method with text control. Different from previous works, 
+                    LivePhoto truely listens to the text instructions and well preserves the object-ID.
+                  </p>
+                </td>
+              </tr>
+
+
               <tr onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
@@ -161,7 +204,6 @@
                     function malle_start() {
                       document.getElementById('malle_image').style.opacity = "1";
                     }
-
                     function malle_stop() {
                       document.getElementById('malle_image').style.opacity = "0";
                     }
@@ -176,10 +218,11 @@
                   <strong>Xi Chen</strong>, Lianghua Huang, Yu Liu, Yujun Shen, Deli Zhao, Hengshuang Zhao 
                   <br>
                   <em>arxiv</em>, 2023
-
                   <br>
                   <a href="https://arxiv.org/pdf/2307.09481.pdf">pdf</a>/
-                  <a href="https://damo-vilab.github.io/AnyDoor-Page/">page</a>
+                  <a href="https://damo-vilab.github.io/AnyDoor-Page/">page</a>/
+                  <a href="https://github.com/damo-vilab/AnyDoor">code</a>/
+                  <a href="https://mp.weixin.qq.com/s/IlRAhuJ4k0sFRJulUKZICA">media (量子位)</a>
                   <p></p>
                   <p>
                     This work presents AnyDoor, a diffusion-based image generator with the power to 
