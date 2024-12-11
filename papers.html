@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Papers</title>
+
+    <meta name="author" content="Xi Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/jpg" href="images/hku_icon.jpeg">
+
+    <script type="text/javascript">
+
+        function display(id) {
+            var traget = document.getElementById(id);
+            if (traget.style.display == "none") {
+                traget.style.display = "";
+            } else {
+                traget.style.display = "none";
+            }
+        }  
+    </script>
+</head>
+
+<body>
+    <table
+        style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+            <tr style="padding:0px">
+                <td style="padding:0px">
+                    <name>Papers</name>
+                    <p>
+                        (*: Equal contribution)
+                    </p>
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:20px;width:100%;vertical-align:middle">
+                                    <heading>2023</heading>
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/pdf/2307.09481.pdf">
+                                                <papertitle>AnyDoor: Zero-shot Object-level Image Customization</papertitle>
+                                            </a>
+                                            <br>
+                                            arxiv
+                                            <br>
+                                            <strong>Xi Chen</strong>, Lianghua Huang, Yu Liu, Yujun Shen, Deli Zhao, Hengshuang Zhao 
+                                            <br>
+                                            <a href="https://arxiv.org/pdf/2307.09481.pdf">pdf</a>/
+                                            <a href="https://damo-vilab.github.io/AnyDoor-Page/">page</a>/
+                                            <a onclick="return display('abs_ops');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_ops" style="display: none;">
+                                                This work presents AnyDoor, a diffusion-based image generator with the power to teleport target objects to new scenes at user-specified locations in a harmonious way. 
+                                                Instead of tuning parameters for each object, our model is trained only once and effortlessly generalizes to diverse object-scene combinations at the inference stage. 
+                                                Such a challenging zero-shot setting requires an adequate characterization of a certain object. To this end, we complement the commonly used identity feature with detail features, 
+                                                which are carefully designed to maintain texture details yet allow versatile local variations (e.g., lighting, orientation, posture, etc.), supporting the object in 
+                                                favorably blending with different surroundings. We further propose to borrow knowledge from video datasets, where we can observe various forms (i.e., along the time axis) of a single object, 
+                                                leading to stronger model generalizability and robustness. Extensive experiments demonstrate the superiority of our approach 
+                                                over existing alternatives as well as its great potential in real-world applications, such as virtual try-on and object moving.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/2303.11324">
+                                                <papertitle>Open-vocabulary Panoptic Segmentation with Embedding Modulation</papertitle>
+                                            </a>
+                                            <br>
+                                            ICCV 2023
+                                            <br>
+                                            <strong>Xi Chen</strong>, Shuang Li, Ser-Nam Lim, Antonio Torralba, Hengshuang Zhao 
+                                            <br>
+                                            <a href="https://arxiv.org/abs/2303.11324">pdf</a>/
+                                            <a href="https://opsnet-page.github.io/">page</a>/
+                                            <a onclick="return display('abs_ops');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_ops" style="display: none;">
+                                                Open-vocabulary image segmentation is attracting increasing
+                                                attention due to its critical applications in the real
+                                                world. Traditional closed-vocabulary segmentation methods
+                                                are not able to characterize novel objects, whereas several
+                                                recent open-vocabulary attempts obtain unsatisfactory
+                                                results, i.e., notable performance reduction on the closedvocabulary
+                                                and massive demand for extra data. To this
+                                                end, we propose OPSNet, an omnipotent and data-efficient
+                                                framework for Open-vocabulary Panoptic Segmentation.
+                                                Specifically, the exquisitely designed Embedding Modulation
+                                                module, together with several meticulous components,
+                                                enables adequate embedding enhancement and information
+                                                exchange between the segmentation model and the
+                                                visual-linguistic well-aligned CLIP encoder, resulting in
+                                                superior segmentation performance under both open- and
+                                                closed-vocabulary settings with much fewer need of additional
+                                                data. Extensive experimental evaluations are conducted
+                                                across multiple datasets (e.g., COCO, ADE20K,
+                                                Cityscapes, and PascalContext) under various circumstances,
+                                                where the proposed OPSNet achieves state-of-theart
+                                                results, which demonstrates the effectiveness and generality
+                                                of the proposed approach. The code and trained models
+                                                will be made publicly available.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/2303.11749">
+                                                <papertitle>Detecting Everything in the Open World: Towards Universal Object Detection</papertitle>
+                                            </a>
+                                            <br>
+                                            CVPR2023
+                                            <br>
+                                            Zhenyu Wang, Yali Li, <strong>Xi Chen</strong>, Ser-Nam Lim, Antonio Torralba, Hengshuang Zhao, Shengjin Wang
+                                            <br>
+                                            <a href="https://arxiv.org/abs/2303.11749">pdf</a>/
+                                            <a href="https://github.com/zhenyuw16/UniDetector">code</a>/
+                                            <a onclick="return display('abs_unidet');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_unidet" style="display: none;">
+                                                In this paper, we formally address universal object detection, which aims to detect every scene and predict every category. The dependence on human annotations, the
+                                                limited visual information, and the novel categories in the
+                                                open world severely restrict the universality of traditional
+                                                detectors. We propose UniDetector, a universal object detector that has the ability to recognize enormous categories
+                                                in the open world. The critical points for the universality of UniDetector are: 1) it leverages images of multiple sources and heterogeneous label spaces for training
+                                                through the alignment of image and text spaces, which guarantees sufficient information for universal representations.
+                                                2) it generalizes to the open world easily while keeping the
+                                                balance between seen and unseen classes, thanks to abundant information from both vision and language modalities. 3) it further promotes the generalization ability to
+                                                novel categories through our proposed decoupling training manner and probability calibration. These contributions allow UniDetector to detect over 7k categories, the
+                                                largest measurable category size so far, with only about
+                                                500 classes participating in training. Our UniDetector behaves the strong zero-shot generalization ability on largevocabulary datasets like LVIS, ImageNetBoxes, and VisualGenome - it surpasses the traditional supervised baselines by more than 4% on average without seeing any corresponding images. On 13 public detection datasets with
+                                                various scenes, UniDetector also achieves state-of-the-art
+                                                performance with only a 3% amount of training data. 
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/2303.11320">
+                                                <papertitle>ScribbleSeg: Scribble-based Interactive Image Segmentation</papertitle>
+                                            </a>
+                                            <br>
+                                            Manuscripts 2023
+                                            <br>
+                                            <strong>Xi Chen</strong>, Yau Shing Jonathan Cheung, Ser-Nam Lim, Hengshuang Zhao
+                                            <br>
+                                            <a href="https://arxiv.org/abs/2303.11320">pdf</a>/
+                                            <a onclick="return display('abs_scribble');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_scribble" style="display: none;">
+                                                Interactive segmentation enables users to extract masks
+                                                by providing simple annotations to indicate the target, such
+                                                as boxes, clicks, or scribbles. Among these interaction formats,
+                                                scribbles are the most flexible as they can be of arbitrary
+                                                shapes and sizes. This enables scribbles to provide
+                                                more indications of the target object. However, previous
+                                                works mainly focus on click-based configuration, and the
+                                                scribble-based setting is rarely explored. In this work, we
+                                                attempt to formulate a standard protocol for scribble-based
+                                                interactive segmentation. Basically, we design diversified
+                                                strategies to simulate scribbles for training, propose a deterministic
+                                                scribble generator for evaluation, and construct
+                                                a challenging benchmark. Besides, we build a strong framework
+                                                ScribbleSeg, consisting of a Prototype Adaption Module
+                                                (PAM) and a Corrective Refine Module (CRM), for the
+                                                task. Extensive experiments show that ScribbleSeg performs
+                                                notably better than previous click-based methods. We hope
+                                                this could serve as a more powerful and general solution for
+                                                interactive segmentation. Our code will be made available.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <heading>2022</heading>
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/2204.02574">
+                                                <papertitle>FocalClick: Towards Practical Interactive Image Segmentation</papertitle>
+                                            </a>
+                                            <br>
+                                            CVPR2022
+                                            <br>
+                                            <strong>Xi Chen</strong>, Zhiyan Zhao, Yilei Zhang, Manni Duan, Donglian Qi, Hengshuang Zhao
+                                            <br>
+                                            <a href="https://arxiv.org/abs/2204.02574">pdf</a>/
+                                            <a href="https://github.com/XavierCHEN34/ClickSEG">code</a>/
+                                            <a onclick="return display('abs_focalclick');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_focalclick" style="display: none;">
+                                                Interactive segmentation allows users to extract target
+                                                masks by making positive/negative clicks. Although explored
+                                                by many previous works, there is still a gap between
+                                                academic approaches and industrial needs: first, existing
+                                                models are not efficient enough to work on low-power devices;
+                                                second, they perform poorly when used to refine preexisting
+                                                masks as they could not avoid destroying the correct
+                                                part. FocalClick solves both issues at once by predicting
+                                                and updating the mask in localized areas. For higher
+                                                efficiency, we decompose the slow prediction on the entire
+                                                image into two fast inferences on small crops: a coarse
+                                                segmentation on the Target Crop, and a local refinement
+                                                on the Focus Crop. To make the model work with preexisting
+                                                masks, we formulate a sub-task termed Interactive
+                                                Mask Correction, and propose Progressive Merge as the solution.
+                                                Progressive Merge exploits morphological information
+                                                to decide where to preserve and where to update, enabling
+                                                users to refine any preexisting mask effectively. FocalClick
+                                                achieves competitive results against SOTA methods
+                                                with significantly smaller FLOPs. It also shows significant
+                                                superiority when making corrections on preexisting masks.
+                                                Code and data will be released at ClickSEG
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231222000662">
+                                                <papertitle>iNL: Implicit non-local network</papertitle>
+                                            </a>
+                                            <br>
+                                            Neurocomputing
+                                            <br>
+                                            Yifeng Han, <strong>Xi Chen</strong>, Songjie Zhang, Donglian Qi
+                                            <br>
+                                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0925231222000662">pdf</a>/
+                                            <a onclick="return display('abs_inl');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_inl" style="display: none;">
+                                                The attention mechanism of computer vision represented by a non-local network 
+                                                improves the performance of numerous vision tasks while bringing computational 
+                                                burden for deployment Wang et al. (2018). In this work, we explore to release the
+                                                inference computation for non-local network by decoupling the training/inference 
+                                                procedure. Specifically, we propose the implicit non-local network (iNL). During 
+                                                training, iNL models the dependency between features across long-range affinities 
+                                                like original non-local blocks; during inference, iNL could be reformulated as only 
+                                                two convolution layers but can rival non-local network. In this way, the computation 
+                                                complexity and the memory costs are reduced. In addition, we take a further step and 
+                                                extend our iNL into a more generalized form, which covers the attentions of different 
+                                                orders in computer vision tasks. iNL brings steady improvements on multiple benchmarks
+                                                 of different vision tasks including classification, detection, and instance 
+                                                 segmentation. In the meantime, it provides a brand–new perspective to understand the
+                                                  attention mechanism in deep neural networks.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <heading>2021</heading>
+                                    <ul>
+                                        <li>
+                                            <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Conditional_Diffusion_for_Interactive_Segmentation_ICCV_2021_paper.pdf">
+                                                <papertitle>Conditional Diffusion for Interactive Segmentation</papertitle>
+                                            </a>
+                                            <br>
+                                            ICCV2021
+                                            <br>
+                                            <strong>Xi Chen</strong>, Zhiyan Zhao, Feiwu Yu, Yilei Zhang, Manni Duan 
+                                            <br>
+                                            <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Chen_Conditional_Diffusion_for_Interactive_Segmentation_ICCV_2021_paper.pdf">pdf</a>/
+                                            <a href="https://github.com/XavierCHEN34/ClickSEG">code</a>/
+                                            <a onclick="return display('abs_cdnet');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_cdnet" style="display: none;">
+                                                In click-based interactive segmentation, the mask extraction
+                                                process is dictated by positive/negative user clicks;
+                                                however, most existing methods do not fully exploit the
+                                                user cues, requiring excessive numbers of clicks for satisfactory
+                                                results. We propose Conditional Diffusion Network
+                                                (CDNet), which propagates labeled representations
+                                                from clicks to conditioned destinations with two levels of
+                                                affinities: Feature Diffusion Module (FDM) spreads features
+                                                from clicks to potential target regions with global similarity;
+                                                Pixel Diffusion Module (PDM) diffuses the predicted
+                                                logits of clicks within locally connected regions. Thus, the
+                                                information inferred by user clicks could be generalized to
+                                                proper destinations. In addition, we put forward Diversified
+                                                Training (DT), which reduces the optimization ambiguity
+                                                caused by click simulation. With FDM,PDM and DT, CDNet
+                                                could better understand user's intentions and make better
+                                                predictions with limited interactions. CDNet achieves
+                                                state-of-the-art performance on several benchmarks.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <heading>2020</heading>
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/2003.00482">
+                                                <papertitle>State-Aware Tracker for Real-Time Video Object Segmentation</papertitle>
+                                            </a>
+                                            <br>
+                                            CVPR2020
+                                            <br>
+                                            <strong>Xi Chen</strong>, Zuoxin Li, Ye Yuan, Gang Yu, Jianxin Shen, Donglian Qi
+                                            <br>
+                                            <a href="https://arxiv.org/abs/2003.00482">pdf</a>/
+                                            <a href="https://github.com/megvii-research/video_analyst">code</a> /
+                                            <a onclick="return display('abs_sat');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_sat" style="display: none;">
+                                                In this work, we address the task of semi-supervised
+                                                video object segmentation (VOS) and explore how to make
+                                                efficient use of video property to tackle the challenge of
+                                                semi-supervision. We propose a novel pipeline called State-
+                                                Aware Tracker (SAT), which can produce accurate segmen-
+                                                tation results with real-time speed. For higher efficiency,
+                                                SAT takes advantage of the inter-frame consistency and
+                                                deals with each target object as a tracklet. For more sta-
+                                                ble and robust performance over video sequences, SAT gets
+                                                awareness for each state and makes self-adaptation via two
+                                                feedback loops. One loop assists SAT in generating more
+                                                stable tracklets. The other loop helps to construct a more
+                                                robust and holistic target representation. SAT achieves a
+                                                promising result of 72.3% J&F mean with 39 FPS on
+                                                DAVIS2017-Val dataset, which shows a decent trade-off be-
+                                                tween efficiency and accuracy.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>
+                                            <a href="https://caod.oriprobe.com/articles/60158594/A_Unified_Algorithm_for_Object_Tracking_and_Segmen.htm">
+                                                <papertitle>A Unified Algorithm for Object Tracking and Segmentation and its Application on Intelligent Video Surveillance for Transformer Substation</papertitle>
+                                            </a>
+                                            <br>
+                                            Proceedings of the CSEE
+                                            <br>
+                                            <strong>Xi Chen</strong>, Yifeng Han, Yunfeng Yan, Donglian Qi, Jianxin Shen
+                                            <br>
+                                            <a href="https://caod.oriprobe.com/articles/60158594/A_Unified_Algorithm_for_Object_Tracking_and_Segmen.htm">pdf</a>/
+                                            <a onclick="return display('abs_trackseg');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_trackseg" style="display: none;">
+                                                Considering the diversified requirements in intelligent video surveillance for 
+                                                transformer substation, a unified algorithm for object tracking and segmentation
+                                                 was proposed which is able to track and segment humans, vehicles, and many other
+                                                  foreign objects with real-time speed. Based on SiamRPN, an efficient segmentation
+                                                   branch was designed to get high quality mask for target object. In addition, in 
+                                                   order to enhance tracking accuracy with the result of segmentation, a mask quality 
+                                                   scoring method was proposed. Besides, the proposed method adopts templet updating
+                                                    strategy, which makes the method more robust for long sequences. This algorithm not 
+                                                    only reaches high accuracy and robustness in the practical task of video surveillance 
+                                                    for transformer substation, but also gets high performance on VOT2018 benchmark.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <heading>2019</heading>
+                                    <ul>
+                                        <li>
+                                            <a href="https://ieeexplore.ieee.org/abstract/document/8865151">
+                                                <papertitle>Real-time Human Segmentation using Pose Skeleton Map</papertitle>
+                                            </a>
+                                            <br>
+                                            CCC2019
+                                            <br>
+                                            <strong>Xi Chen</strong>, Ziqiang Zhou, Ying Ying, Donglian Qi
+                                            <br>
+                                            <a href="https://ieeexplore.ieee.org/abstract/document/8865151">pdf</a>/
+                                            <a onclick="return display('abs_poseseg');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_poseseg" style="display: none;">
+                                                In this paper, an algorithm for real-time human segmentation is proposed. 
+                                                This algorithm uses connection relations of human joints provided by pose 
+                                                estimation as prior knowledge which brings striking enhancement for the 
+                                                accuracy of human segmentation. High-quality segmentation results can be 
+                                                produced with real-time speed dealing with large range of human pose under 
+                                                complicated scenes.
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <ul>
+                                        <li>
+                                            <a href="https://arxiv.org/abs/1901.03814">
+                                                <papertitle>Boundary-Aware Network for Fast and High-Accuracy Portrait Segmentation</papertitle>
+                                            </a>
+                                            <br>
+                                            Manuscripts 2019
+                                            <br>
+                                            <strong>Xi Chen</strong>, Donglian Qi, Jianxin Shen
+                                            <br>
+                                            <a href="https://arxiv.org/abs/1901.03814">pdf</a>/
+                                            <a onclick="return display('abs_banet');">abstract</a>
+                                            <p></p>
+                                            <div id="abs_banet" style="display: none;">
+                                                Compared with other semantic segmentation tasks, portrait segmentation requires both higher precision and faster 
+                                                inference speed. However, this problem has not been well studied in previous works. In this paper, 
+                                                we propose a lightweight network architecture, called Boundary-Aware Network (BANet) which selectively
+                                                extracts detail information in boundary area to make high-quality segmentation output with real-time( >25FPS) 
+                                                speed. In addition, we design a new loss function called refine loss which supervises the network with image 
+                                                level gradient information. Our model is able to produce finer segmentation results which has richer details 
+                                                than annotations.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+    </table>
+</body>
