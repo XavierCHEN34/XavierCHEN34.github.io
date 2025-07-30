@@ -157,6 +157,46 @@
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
+                      <img src='images/mico.png' width="190">
+                    </div>
+                    <img src='images/mico2.png' width="190">
+                  </div>
+                  <script type="text/javascript">
+                    function malle_start() {
+                      document.getElementById('malle_image').style.opacity = "1";
+                    }
+                    function malle_stop() {
+                      document.getElementById('malle_image').style.opacity = "0";
+                    }
+                    malle_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:70%;vertical-align:top">
+                  <a href="https://arxiv.org/abs/2506.22434">
+                    <papertitle>MiCo: Multi-image Contrast for Reinforcement Visual Reasoning</papertitle>
+                  </a>
+                  <br>
+                  <strong>Xi Chen</strong>, Mingkang Zhu, Shaoteng Liu, Xiaoyang Wu, Xiaogang Xu, Yu Liu, Xiang Bai, Hengshuang Zhao
+                  <br>
+                  <em>Preprint</em>, 2025
+                  <br>
+                  <a href="https://arxiv.org/abs/2506.22434">pdf</a> / 
+                  <a href="https://x.com/_akhaliq/status/1939528983135363086">media(AK)</a> /
+                  <a href="https://arxiv.org/abs/2506.22434">code(todo)</a> 
+                  <p></p>
+                  <p>
+                    MiCo is a self-supervised reinforcement learning framework for multi-image visual reasoning. 
+                    It leverages supervision by comparing an image, its augmented view, and a similar image to encourage chain-of-thought (CoT) reasoning through a method we call "Augmented-GRPO."
+                  </p>
+                </td>
+              </tr>
+
+
+
+              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+                <td style="padding:20px;width:30%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='malle_image'>
                       <img src='images/UniReal.gif' width="190">
                     </div>
                     <img src='images/UniReal.gif' width="190">
@@ -181,10 +221,11 @@
                   <em>CVPR</em>, 2025 (Highlight)
                   <br>
                   <a href="https://arxiv.org/abs/2412.07774">pdf</a>/
-                  <a href="https://xavierchen34.github.io/UniReal-Page/">page</a>
+                  <a href="https://xavierchen34.github.io/UniReal-Page/">page</a>/
+                  <a href="https://github.com/XavierCHEN34/UniReal">code (data construction)</a>
                   <p></p>
                   <p>
-                    <span style="color: red;">Foundaitional multi-modal generative model cooperated with Adobe.</span>  
+                    <span style="color: red;">Foundational multi-modal generative model cooperated with Adobe.</span>  
                     UniReal is a universal framework for multiple image generation and editing tasks. We leverage a video model to handld image tasks by treating different numbers of 
                     input/output images as frames. We also seek universal supervisions from video data, thus generating realistic results that understand the world dynamics.
                   </p>
@@ -555,7 +596,15 @@
                     <li> ICLR (2023)</li>
                     <li> AAAI (2022, 2023)</li>
                     <li> ACM MM (2024)</li>
-                    <li> Journals: IJCV, PR, TCSVT, ect</li>                    
+                    <li> Journals: IJCV, PR, TCSVT, ect</li>    
+                  </ul>
+
+                  <p>
+                    <b>Orgnizer / Program Chair</b>
+                  </p>
+                  <ul>
+                    <li><a href="https://higen-2025.github.io/" target="_blank" rel="noopener noreferrer">HiGen (ICCV 2025 Workshop)</a></li>
+                  </ul>
                 </td>
               </tr>
             </tbody>
