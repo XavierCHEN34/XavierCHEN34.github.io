@@ -9,29 +9,35 @@
   <meta name="author" content="Xi Chen">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/jpg" href="images/hku_icon.jpeg">
 
-  <script type="text/javascript">
-
-    function display(id) {
-      var traget = document.getElementById(id);
-      if (traget.style.display == "none") {
-        traget.style.display = "";
-      } else {
-        traget.style.display = "none";
-      }
-    }  
-  </script>
 </head>
 
 <body>
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+  <!-- ===== Top Navigation Bar ===== -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <span class="topnav-name">Xi CHEN</span>
+      <div class="topnav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#service">Service</a>
+      </div>
+    </div>
+  </nav>
+
+  <table class="main-wrapper"
+    style="width:100%;max-width:960px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
-          <table
+          <table class="bio-section" id="about"
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr style="padding:0px">
@@ -71,7 +77,7 @@
                   </p>
 
                   <p>
-                    Now I have interests in AIGC, MLLM, and reinforcement learning. 
+                    Now I have interests in multi-modal understanding, generation, and editing.
                     <span style="color:rgb(175, 9, 9); font-weight:bold;">
                       I co-supervise interns with some industrial groups.
                     </span>  
@@ -81,11 +87,10 @@
                   <p>
                     <!-- <font color="red">Update: On job market now! Drop me an email if you are interested.</font> -->
                   </p>
-                  <p style="text-align:center">
-                    <a href="data/cv_chenxi_2023.3.pdf">CV</a> &nbsp/&nbsp
+                  <p class="profile-links">
+                    <a href="data/cv_chenxi_2023.3.pdf">CV</a>
                     <a href="https://scholar.google.com/citations?user=INISnXkAAAAJ&hl=en">Google Scholar</a>
-                    &nbsp/&nbsp
-                    <a href="https://github.com/XavierCHEN34">Github</a> &nbsp/&nbsp
+                    <a href="https://github.com/XavierCHEN34">Github</a>
                     <a href="https://www.zhihu.com/people/xavierchen">Zhihu</a>
                   </p>
                 </td>
@@ -125,8 +130,9 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>News</heading>
-                  <ul>
+                  <heading id="news">News</heading>
+                  <ul class="news-list" id="news-list">
+                    <li> <b>[Apr. 2026]</b> Three papers accepted by ICLR2026, and four papers accepted by CVPR2026 (1 Oral)!</li>
                     <li> <b>[Sep. 2025]</b> Six papers are accepted by NeurIPS2025! (1 Oral) </li>
                     <li> <b>[Apr. 2025]</b> Four papers accepted by Siggraph2025!</li>
                     <li> <b>[Mar. 2025]</b> Four papers accepted by CVPR2025 (two Highlights)!</li>
@@ -135,22 +141,39 @@
                     <li> <b>[Jun. 2024]</b> We release <a href="https://xavierchen34.github.io/MimicBrush-Page/">MimicBrush</a> for imitative image editing. </li>
                     <li> <b>[Dec. 2023]</b> We release <a href="https://xavierchen34.github.io/LivePhoto-Page/">LivePhoto</a> for image-to-video generation. </li>
                     <li> <b>[Dec. 2023]</b> The code of AnyDoor is released <a href="https://github.com/damo-vilab/AnyDoor">here</a>, we would continue to make it stronger. </li>
-                    <li> <b>[Jul. 2023]</b> We release <a href="https://damo-vilab.github.io/AnyDoor-Page/">AnyDoor</a> for zero-shot image composition & customization.</li>
+                    <li> <b>[Jul. 2023]</b> We release <a href="https://damo-vilab.github.io/AnyDoor-Page/">AnyDoor</a> for zero-shot image composition &amp; customization.</li>
                     <li> <b>[Jul. 2023]</b> OPSNet is accepted by ICCV2023.</li>
-                    <li> <b>[Mar. 2023]</b> We release the manuscripts of 
-                      <a href="https://arxiv.org/abs/2303.11324">OPSNet</a> and 
+                    <li> <b>[Mar. 2023]</b> We release the manuscripts of
+                      <a href="https://arxiv.org/abs/2303.11324">OPSNet</a> and
                       <a href="https://arxiv.org/abs/2303.11320">ScribbleSeg</a>.</li>
                     <li> <b>[Mar. 2023]</b> One co-authored paper accepted to CVPR2023.</li>
                     <li> <b>[Feb. 2022]</b> I join HKU as a PhD student. </li>
-                    <a onclick="return display('old_news');"> ---- show more ----</a>
-                    <div id="old_news" style="display: none;">
-                      <li> <b>[Mar. 2022]</b> One paper accepted to CVPR2022</li>
-                      <li> <b>[Jun. 2021]</b> One paper accepted to ICCV2021</li>
-                      <li> <b>[Jun. 2020]</b> I graduate from Zhejiang University and join Alibaba Group</li>
-                      <li> <b>[Mar. 2020]</b> One paper accepted to CVPR2020</li>
-
-                    </div>
+                    <li> <b>[Mar. 2022]</b> One paper accepted to CVPR2022.</li>
+                    <li> <b>[Jun. 2021]</b> One paper accepted to ICCV2021.</li>
+                    <li> <b>[Jun. 2020]</b> I graduate from Zhejiang University and join Alibaba Group.</li>
+                    <li> <b>[Mar. 2020]</b> One paper accepted to CVPR2020.</li>
                   </ul>
+                  <div style="text-align:left;margin-top:6px;">
+                    <a id="news-toggle" href="javascript:void(0);" onclick="toggleNews()" style="font-size:13px;">▼ Show more</a>
+                  </div>
+                  <script>
+                    var NEWS_VISIBLE = 10;
+                    function applyNewsVisibility(expanded) {
+                      var items = document.querySelectorAll('#news-list li');
+                      for (var i = 0; i < items.length; i++) {
+                        items[i].style.display = (expanded || i < NEWS_VISIBLE) ? '' : 'none';
+                      }
+                      var toggle = document.getElementById('news-toggle');
+                      toggle.style.display = items.length <= NEWS_VISIBLE ? 'none' : '';
+                      toggle.textContent = expanded ? '▲ Show less' : '▼ Show more';
+                      toggle._expanded = expanded;
+                    }
+                    function toggleNews() {
+                      var toggle = document.getElementById('news-toggle');
+                      applyNewsVisibility(!toggle._expanded);
+                    }
+                    applyNewsVisibility(false);
+                  </script>
                 </td>
               </tr>
             </tbody>
@@ -161,7 +184,7 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>First Author Publications
+                  <heading id="publications">First Author Publications
                   <p>
                     <a href="https://scholar.google.com/citations?user=INISnXkAAAAJ&hl=en">Google Scholar</a> 
                   </p>
@@ -174,13 +197,13 @@
             <tbody>
 
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/mico.png' width="190">
+                      <img src='images/mico.png'>
                     </div>
-                    <img src='images/mico2.png' width="190">
+                    <img src='images/mico2.png'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -214,13 +237,13 @@
 
 
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/UniReal.gif' width="190">
+                      <img src='images/UniReal.gif'>
                     </div>
-                    <img src='images/UniReal.gif' width="190">
+                    <img src='images/UniReal.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -254,13 +277,13 @@
               </tr>
 
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/MimicBrush.png' width="190">
+                      <img src='images/MimicBrush.png'>
                     </div>
-                    <img src='images/MimicBrush.png' width="190">
+                    <img src='images/MimicBrush.png'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -299,13 +322,13 @@
 
   
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/LivePhoto.gif' width="190">
+                      <img src='images/LivePhoto.gif'>
                     </div>
-                    <img src='images/LivePhoto.gif' width="190">
+                    <img src='images/LivePhoto.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -339,13 +362,13 @@
               </tr>
 
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/AnyDoor_teaser.jpg' width="190">
+                      <img src='images/AnyDoor_teaser.jpg'>
                     </div>
-                    <img src='images/AnyDoor_teaser.jpg' width="190">
+                    <img src='images/AnyDoor_teaser.jpg'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -381,13 +404,13 @@
                 </td>
               </tr>
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/OPSNet.gif' width="190">
+                      <img src='images/OPSNet.gif'>
                     </div>
-                    <img src='images/OPSNet.gif' width="190">
+                    <img src='images/OPSNet.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -422,13 +445,13 @@
               
               
               
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/FocalClick.png' width="190">
+                      <img src='images/FocalClick.png'>
                     </div>
-                    <img src='images/FocalClick.png' width="190">
+                    <img src='images/FocalClick.png'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -463,13 +486,13 @@
               </tr>    
 
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/CDNet.png' width="190">
+                      <img src='images/CDNet.png'>
                     </div>
-                    <img src='images/CDNet.png' width="190">
+                    <img src='images/CDNet.png'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -502,13 +525,13 @@
                 </td>
               </tr>    
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/sat.gif' width="190">
+                      <img src='images/sat.gif'>
                     </div>
-                    <img src='images/sat.gif' width="190">
+                    <img src='images/sat.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -551,7 +574,7 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading> Projects I Led </heading>
+                  <heading id="projects"> Selected Projects I Led </heading>
                 </td>
               </tr>
             </tbody>
@@ -560,13 +583,13 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/picabench.png' width="190">
+                      <img src='images/picabench.png'>
                     </div>
-                    <img src='images/picabench.png' width="190">
+                    <img src='images/picabench.png'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -586,12 +609,12 @@
                   <br>
                     Yuandong Pu, Le Zhuo, Songhao Han, Jinbo Xing, Kaiwen Zhu, Shuo Cao, Bin Fu, Si Liu, Hongsheng Li, Yu Qiao, Wenlong Zhang, <strong>Xi Chen*</strong>, Yihao Liu*
                   <br>
-                  <em>Arxiv Preprint</em>, 2025
+                  <em>ICLR</em>, 2026
 
                   <br>
                   <a href="https://arxiv.org/abs/2510.17681">pdf</a> /
                   <a href="https://picabench.github.io/">page</a> /
-                  <a href="https://github.com/Andrew0613/PICABench">code</a> 
+                  <a href="https://github.com/Andrew0613/PICABench">code</a>
                   <p></p>
                   <p>
                     We evaluates physical realism across eight sub-dimension for most of the common editing operations (add, remove, attribute change, etc.)
@@ -601,52 +624,38 @@
               </tr>   
               
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
-                <td style="padding:20px;width:30%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='malle_image'>
-                      <img src='images/physmaster.gif' width="190">
+              <!-- PhysMaster: commented out (not accepted yet)
+              <tr class=”paper-row” onmouseout=”malle_stop()” onmouseover=”malle_start()”>
+                <td style=”padding:20px;width:30%;vertical-align:middle”>
+                  <div class=”one”>
+                    <div class=”two” id='malle_image'>
+                      <img src='images/physmaster.gif'>
                     </div>
-                    <img src='images/physmaster.gif' width="190">
+                    <img src='images/physmaster.gif'>
                   </div>
-                  <script type="text/javascript">
-                    function malle_start() {
-                      document.getElementById('malle_image').style.opacity = "1";
-                    }
-
-                    function malle_stop() {
-                      document.getElementById('malle_image').style.opacity = "0";
-                    }
-                    malle_stop()
-                  </script>
                 </td>
-                <td style="padding:20px;width:70%;vertical-align:top">
-                  <a href="https://arxiv.org/abs/2510.13809">
+                <td style=”padding:20px;width:70%;vertical-align:top”>
+                  <a href=”https://arxiv.org/abs/2510.13809”>
                     <papertitle>PhysMaster: Mastering Physical Representation for Video Generation via Reinforcement Learning</papertitle>
                   </a>
                   <br>
                     Sihui Ji, <strong>Xi Chen</strong>, Xin Tao, Pengfei Wan, Hengshuang Zhao
                   <br>
                   <em>Arxiv Preprint</em>, 2025
-
                   <br>
-                  <a href="https://arxiv.org/abs/2510.13809">pdf</a> /
-                  <a href="https://sihuiji.github.io/PhysMaster-Page/">page</a> 
-                  <p></p>
-                  <p>
-                  We investigate physically-plausible image-to-video generation. We train a Physical Encoder to extract a “physical representation” from the initial image using reinforcement learning. 
-                  This representation is then injected into a diffusion model to guide and enhance the generation process.
-                  </p>
+                  <a href=”https://arxiv.org/abs/2510.13809”>pdf</a> /
+                  <a href=”https://sihuiji.github.io/PhysMaster-Page/”>page</a>
                 </td>
-              </tr>   
+              </tr>
+              -->
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/PlayerOne.gif' width="190">
+                      <img src='images/PlayerOne.gif'>
                     </div>
-                    <img src='images/PlayerOne.gif' width="190">
+                    <img src='images/PlayerOne.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -678,13 +687,13 @@
                 </td>
               </tr>   
 
-              <tr onmouseout="malle_stop()" onmouseover="malle_start()">
+              <tr class="paper-row" onmouseout="malle_stop()" onmouseover="malle_start()">
                 <td style="padding:20px;width:30%;vertical-align:middle">
                   <div class="one">
                     <div class="two" id='malle_image'>
-                      <img src='images/omnivcus.gif' width="190">
+                      <img src='images/omnivcus.gif'>
                     </div>
-                    <img src='images/omnivcus.gif' width="190">
+                    <img src='images/omnivcus.gif'>
                   </div>
                   <script type="text/javascript">
                     function malle_start() {
@@ -707,8 +716,9 @@
                   <em>NeurIPS</em>, 2025
 
                   <br>
-                  <a href="https://arxiv.org/abs/2506.23361">pdf</a> /
-                  <a href="https://caiyuanhao1998.github.io/project/OmniVCus/">page</a> 
+                  <a href="https://openreview.net/pdf/0008876971964c9e6af7ce90b5613b317372d8d7.pdf">pdf</a> /
+                  <a href="https://caiyuanhao1998.github.io/project/OmniVCus/">page</a> /
+                  <a href="https://github.com/caiyuanhao1998/OmniVCus">code</a>
                   <p></p>
                   <p>
                     We conduct a systematic exploration of customized video generation, including a data construction pipeline, a unified model, and a comprehensive benchmark.
@@ -728,11 +738,11 @@
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
 
-                  <heading>Academic Service</heading>
+                  <heading id="service">Academic Service</heading>
                   <p>
                     <b>Reviewer / Program Committee Member</b>
                   </p>
-                  <ul>
+                  <ul class="service-list">
                     <li> CVPR (2021, 2022, 2023, 2024, 2025, 2026)</li>
                     <li> ICCV (2021, 2023, 2025)</li>
                     <li> ECCV (2022,2024)</li>
@@ -741,13 +751,14 @@
                     <li> ICLR (2023, 2025)</li>
                     <li> AAAI (2022, 2023)</li>
                     <li> ACM MM (2024)</li>
-                    <li> Journals: IJCV, PR, TCSVT, ect</li>    
+                    <li> Journals: TPAMI, IJCV, PR, TCSVT, etc</li>
                   </ul>
 
                   <p>
-                    <b>Orgnizer / Program Chair</b>
+                    <b>Organizer / Program Chair</b>
                   </p>
-                  <ul>
+                  <ul class="service-list">
+                    <li><a href="https://higen-2025.github.io/" target="_blank" rel="noopener noreferrer">HiGen (CVPR 2026 Workshop)</a></li>
                     <li><a href="https://higen-2025.github.io/" target="_blank" rel="noopener noreferrer">HiGen (ICCV 2025 Workshop)</a></li>
                   </ul>
                 </td>
@@ -759,8 +770,8 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
-                <td style="padding:20px;width:30%;vertical-align:middle">
-                  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=tt&d=64wFOrCgVspDjUUVP2vRXujCrmintJYyeSI4nWJgn-c'></script>
+                <td class="visitor-map-cell">
+                  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=64wFOrCgVspDjUUVP2vRXujCrmintJYyeSI4nWJgn-c'></script>
                 </td>
               </tr>
             </tbody>
@@ -771,9 +782,8 @@
             <tr>
               <td style="padding:0px">
                 <br>
-                <p style="text-align:center;font-size:small;">
-                  Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's
-                    website</a>
+                <p class="footer-note">
+                  Design inspired by <a href="https://jonbarron.info">Jon Barron's website</a> &nbsp;·&nbsp; Beautified by <a href="https://claude.ai/code">Claude Code</a>
                 </p>
               </td>
             </tr>
