@@ -412,8 +412,62 @@ ul {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 640px) {
+
+/* Tablet / large phone: collapse two-column tables to single column */
+@media (max-width: 768px) {
+  /* Bio section: photo stacks above text */
+  .bio-section tr {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+  .bio-section td {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 16px 20px !important;
+  }
+  .bio-section td:last-child {
+    text-align: center;
+    padding-bottom: 8px !important;
+  }
+
+  /* Paper / project rows: image stacks above text */
+  .paper-row {
+    display: block !important;
+  }
+  .paper-row td {
+    display: block !important;
+    width: 100% !important;
+    padding: 8px 20px !important;
+  }
+  .paper-row td:first-child {
+    text-align: center;
+    padding-bottom: 4px !important;
+  }
+
+  /* Thumbnails centred on mobile */
+  .one {
+    display: inline-block !important;
+    margin: 0 auto;
+    width: 200px;
+  }
+  .one img { width: 200px; }
+  .two       { width: 200px; }
+  .two img   { width: 200px; }
+
+  /* Nav: allow links to wrap on very narrow screens */
+  .topnav-inner {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 8px 16px;
+    gap: 4px;
+  }
+}
+
+/* Small phone */
+@media (max-width: 480px) {
   name { font-size: 26px; }
-  .one, .two { width: 140px; }
-  .one img, .two img { width: 140px; }
+  .one, .two { width: 160px; }
+  .one img, .two img { width: 160px; }
+  .topnav-links a { padding: 5px 9px; font-size: 12px; }
 }
