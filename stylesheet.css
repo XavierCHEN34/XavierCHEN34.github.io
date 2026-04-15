@@ -300,6 +300,10 @@ em {
 .paper-row td:first-child {
   padding-left: 20px;
 }
+.paper-row p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
 
 /* Paper thumbnail containers */
 .one {
