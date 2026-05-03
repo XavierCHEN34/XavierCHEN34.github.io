@@ -1,5 +1,5 @@
 /* ============================================================
-   Xi CHEN — Academic Homepage  |  Modern Design
+   Xi CHEN — Academic Homepage  |  Claude-inspired warm palette
    ============================================================ */
 
 /* ---------- Fonts ---------- */
@@ -55,51 +55,70 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* ---------- Design Tokens ---------- */
+/* ---------- Design Tokens (Claude-inspired warm palette) ---------- */
 :root {
-  --blue:        #2563eb;
-  --blue-dark:   #1d4ed8;
-  --blue-light:  #dbeafe;
-  --blue-xlight: #eff6ff;
-  --amber:       #f59e0b;
-  --red-vivid:   #dc2626;
-  --text:        #1e293b;
-  --text-muted:  #64748b;
-  --bg-body:     #ffffff;
-  --bg-card:     #ffffff;
-  --bg-hover:    #f5f8ff;
-  --border:      #e2e8f0;
-  --radius:      14px;
-  --shadow-card: 0 8px 32px rgba(30, 41, 59, 0.10),
-                 0 2px 8px  rgba(30, 41, 59, 0.06);
+  /* Brand accent — Claude's signature warm clay/terracotta */
+  --accent:        #C96442;   /* clay */
+  --accent-dark:   #A04E32;
+  --accent-soft:   #EFE0D6;   /* tinted parchment */
+  --accent-xsoft:  #F6ECE3;
+  --accent-glow:   rgba(201, 100, 66, 0.18);
+
+  /* Warm neutrals — Claude paper / ink */
+  --paper:         #F4EFE6;   /* page background */
+  --paper-2:       #EBE3D5;   /* deeper warm tint for gradient */
+  --paper-3:       #E4D9C5;   /* subtle accent for blur richness */
+  --card:          #FBF7F0;   /* card surface (opaque fallback) */
+  --ink:           #2B2620;   /* primary text */
+  --ink-soft:      #5C5247;   /* muted text */
+  --ink-faint:     #8A7E70;   /* very muted */
+  --hairline:      rgba(43, 38, 32, 0.10);
+  --hairline-soft: rgba(43, 38, 32, 0.06);
+
+  /* Surfaces */
+  --bg-hover:      #F1E9DC;
+
+  /* Highlights */
+  --amber:         #C9892D;
+  --red-vivid:     #B0432A;
+
+  --radius:        14px;
+  --shadow-card:   0 12px 40px rgba(60, 38, 20, 0.10),
+                   0 2px 10px  rgba(60, 38, 20, 0.05);
 }
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-body {
-  background: var(--bg-body);
-  color: var(--text);
+html, body {
+  background: #ffffff;
+  color: var(--ink);
   margin: 0;
   padding: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
 }
 
 body, td, th, tr, p, a {
   font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.7;
+  color: var(--ink);
 }
 
-/* ---------- Top Navigation ---------- */
+/* ---------- Top Navigation (frosted) ---------- */
 .topnav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 8px rgba(30, 41, 59, 0.06);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border-bottom: 1px solid var(--hairline);
+  box-shadow: 0 1px 12px rgba(60, 38, 20, 0.04);
 }
 .topnav-inner {
   max-width: 960px;
@@ -113,7 +132,7 @@ body, td, th, tr, p, a {
 .topnav-name {
   font-weight: 700;
   font-size: 16px;
-  color: var(--text);
+  color: var(--ink);
   letter-spacing: -0.2px;
 }
 .topnav-links {
@@ -125,27 +144,27 @@ body, td, th, tr, p, a {
   border-radius: 8px;
   font-size: 13.5px;
   font-weight: 500;
-  color: var(--text-muted);
-  transition: background 0.15s, color 0.15s;
+  color: var(--ink-soft);
+  transition: background 0.18s ease, color 0.18s ease;
 }
 .topnav-links a:hover {
-  background: var(--blue-xlight);
-  color: var(--blue);
+  background: var(--accent-xsoft);
+  color: var(--accent-dark);
 }
 
 /* ---------- Main Wrapper ---------- */
 .main-wrapper {
-  background: var(--bg-card);
+  background: transparent;
 }
 
 /* ---------- Links ---------- */
 a {
-  color: var(--blue);
+  color: var(--accent-dark);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 a:focus, a:hover {
-  color: var(--blue-dark);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -154,30 +173,21 @@ strong {
   font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 600;
+  color: var(--ink);
 }
 
-/* Section headings */
+/* Section headings — typography does the work, no decorative bar */
 heading {
   display: block;
   font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.3px;
-  padding-bottom: 10px;
-  margin-bottom: 6px;
-  border-bottom: 2px solid var(--blue-light);
-  position: relative;
-}
-heading::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 36px;
-  height: 2px;
-  background: var(--blue);
-  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--hairline);
 }
 
 /* Paper titles */
@@ -187,52 +197,58 @@ papertitle {
   font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
-  color: var(--text);
+  color: var(--ink);
   transition: color 0.15s ease;
   margin-bottom: 3px;
 }
 a:hover papertitle {
-  color: var(--blue);
+  color: var(--accent);
 }
 
 /* Name / title */
 name {
   display: block;
   font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--text);
-}
-
-/* Venue badges */
-em {
-  font-style: normal;
+  font-size: 38px;
   font-weight: 600;
-  font-size: 12.5px;
-  color: var(--blue-dark);
-  background: var(--blue-xlight);
-  border: 1px solid var(--blue-light);
-  padding: 1px 7px;
-  border-radius: 5px;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.1;
 }
 
-/* ---------- Bio Header ---------- */
-.bio-section {
-  background: #ffffff;
-  padding: 36px 20px 40px;
+/* Venue badges — refined italic, no pill */
+em {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: transparent;
+  border: none;
+  padding: 0;
+  letter-spacing: 0.01em;
 }
-.bio-card {
+
+/* ---------- Bio Header — quiet, paper-like card ---------- */
+.bio-section {
+  position: relative;
+  padding: 72px 20px 56px;
   background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  box-shadow:
-    0 4px 6px  rgba(30, 41, 59, 0.04),
-    0 10px 30px rgba(30, 41, 59, 0.08),
-    0 1px 2px  rgba(30, 41, 59, 0.04);
+}
+
+.bio-card {
+  position: relative;
   max-width: 920px;
   margin: 0 auto;
-  overflow: hidden;
+  border-radius: 16px;
+
+  /* No frosted glass, no gradient. Just a single very subtle warm tint
+     — practically white, with a whisper of paper underneath. */
+  background: #FCFAF6;
+
+  /* One hairline border, one diffuse shadow. That's it. */
+  border: 1px solid rgba(43, 38, 32, 0.07);
+  box-shadow: 0 1px 2px rgba(43, 38, 32, 0.03),
+              0 20px 50px -20px rgba(43, 38, 32, 0.10);
 }
 
 /* ---------- Profile Links ---------- */
@@ -242,23 +258,34 @@ em {
 }
 .profile-links a {
   display: inline-block;
-  padding: 5px 16px;
-  background: white;
-  border: 1.5px solid var(--border);
-  border-radius: 24px;
-  color: var(--text);
+  padding: 0;
+  margin: 0 14px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--ink-soft);
   font-size: 13px;
   font-weight: 500;
-  margin: 3px 2px;
-  transition: all 0.2s ease;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  box-shadow: none;
+  position: relative;
+}
+.profile-links a + a::before {
+  content: '';
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 11px;
+  background: var(--hairline);
 }
 .profile-links a:hover {
-  background: var(--blue);
-  border-color: var(--blue);
-  color: #ffffff;
-  box-shadow: 0 3px 10px rgba(37,99,235,0.25);
-  transform: translateY(-1px);
+  color: var(--accent-dark);
+  background: transparent;
+  transform: none;
+  box-shadow: none;
 }
 
 /* ---------- News List ---------- */
@@ -268,30 +295,29 @@ em {
   padding: 0;
 }
 .news-list li {
-  padding: 7px 0 7px 20px;
+  padding: 9px 0;
   position: relative;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--hairline-soft);
   font-size: 13.5px;
-  line-height: 1.55;
+  line-height: 1.6;
+  display: flex;
+  gap: 14px;
 }
 .news-list li:last-child { border-bottom: none; }
-.news-list li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--blue);
-  font-size: 11px;
-  top: 9px;
-}
+.news-list li::before { display: none; }
 .news-list li b {
-  display: inline-block;
-  color: var(--blue-dark);
-  font-size: 11.5px;
-  font-weight: 700;
-  background: var(--blue-light);
-  padding: 0 6px;
-  border-radius: 4px;
-  margin-right: 4px;
+  flex: 0 0 auto;
+  color: var(--ink-faint);
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  margin-right: 0;
+  min-width: 92px;
+  padding-top: 1px;
 }
 
 /* ---------- Paper / Project Rows ---------- */
@@ -315,9 +341,9 @@ em {
   width: 220px;
   position: relative;
   display: inline-block;
-  line-height: 0;          /* removes extra gap below inline images */
+  line-height: 0;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--hairline);
   background: var(--bg-hover);
   overflow: hidden;
 }
@@ -348,18 +374,22 @@ em {
 
 /* ---------- Profile Photo ---------- */
 .profile-photo {
-  border: 3px solid white !important;
-  box-shadow: 0 6px 24px rgba(30,41,59,0.18) !important;
+  border: 3px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow:
+    0 0 0 1px rgba(60, 38, 20, 0.08),
+    0 10px 28px rgba(60, 38, 20, 0.20) !important;
   transition: transform 0.4s ease, box-shadow 0.4s ease !important;
 }
 .profile-photo:hover {
   transform: scale(1.04);
-  box-shadow: 0 10px 30px rgba(30,41,59,0.25) !important;
+  box-shadow:
+    0 0 0 1px rgba(60, 38, 20, 0.10),
+    0 14px 36px rgba(60, 38, 20, 0.28) !important;
 }
 
 /* ---------- Highlight Spans ---------- */
 span.highlight {
-  background-color: #fef9c3;
+  background-color: #FBE9C9;
   padding: 0 3px;
   border-radius: 3px;
 }
@@ -385,33 +415,33 @@ ul {
 
 /* ---------- Footer ---------- */
 .footer-note {
-  color: var(--text-muted);
+  color: var(--ink-faint);
   font-size: 12px;
   padding: 16px 0;
   text-align: center;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--hairline);
 }
 .footer-note a {
-  color: var(--text-muted);
+  color: var(--ink-faint);
   font-size: 12px;
   text-decoration: underline;
-  text-decoration-color: var(--border);
+  text-decoration-color: var(--hairline);
 }
 .footer-note a:hover {
-  color: var(--blue);
-  text-decoration-color: var(--blue);
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 /* ---------- News toggle ---------- */
 #news-toggle {
   font-size: 13px;
   font-weight: 500;
-  color: var(--blue);
+  color: var(--accent-dark);
   cursor: pointer;
   user-select: none;
 }
 #news-toggle:hover {
-  color: var(--blue-dark);
+  color: var(--accent);
 }
 
 /* ---------- Visitor Map ---------- */
@@ -420,11 +450,25 @@ ul {
   padding: 20px;
 }
 
+/* ---------- Fallback for browsers without backdrop-filter ---------- */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .bio-card {
+    background: var(--card);
+  }
+  .topnav {
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .profile-links a {
+    background: var(--card);
+  }
+}
+
 /* ---------- Responsive ---------- */
 
 /* Tablet / large phone: collapse two-column tables to single column */
 @media (max-width: 768px) {
-  /* Bio section: photo stacks above text */
+  .bio-section { padding: 28px 14px 32px; }
+
   .bio-section tr {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -440,7 +484,6 @@ ul {
     padding-bottom: 8px !important;
   }
 
-  /* Paper / project rows: image stacks above text */
   .paper-row {
     display: block !important;
   }
@@ -454,7 +497,6 @@ ul {
     padding-bottom: 4px !important;
   }
 
-  /* Thumbnails centred on mobile */
   .one {
     display: inline-block !important;
     margin: 0 auto;
@@ -464,7 +506,6 @@ ul {
   .two       { width: 200px; }
   .two img   { width: 200px; }
 
-  /* Nav: allow links to wrap on very narrow screens */
   .topnav-inner {
     height: auto;
     flex-wrap: wrap;
