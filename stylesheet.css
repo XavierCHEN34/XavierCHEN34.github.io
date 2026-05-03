@@ -176,18 +176,19 @@ strong {
   color: var(--ink);
 }
 
-/* Section headings — typography does the work, no decorative bar */
+/* Section headings — confident, sentence-case, hairline divider underneath */
 heading {
   display: block;
   font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink-faint);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding-bottom: 14px;
-  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  text-transform: none;
+  padding-bottom: 12px;
+  margin-bottom: 10px;
   border-bottom: 1px solid var(--hairline);
+  line-height: 1.25;
 }
 
 /* Paper titles */
@@ -251,6 +252,16 @@ em {
               0 20px 50px -20px rgba(43, 38, 32, 0.10);
 }
 
+/* ---------- Bio prose: justify both edges ---------- */
+.bio-card p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+/* The centered name and the profile-links row have inline text-align:center
+   already, so they override the rule above and stay centered. */
+
 /* ---------- Profile Links ---------- */
 .profile-links {
   text-align: center;
@@ -258,34 +269,21 @@ em {
 }
 .profile-links a {
   display: inline-block;
-  padding: 0;
-  margin: 0 14px;
-  background: transparent;
+  padding: 6px 16px;
+  margin: 3px 3px;
+  background: var(--accent-xsoft);
   border: none;
-  border-radius: 0;
-  color: var(--ink-soft);
-  font-size: 13px;
+  border-radius: 8px;
+  color: var(--accent-dark);
+  font-size: 13.5px;
   font-weight: 500;
-  letter-spacing: 0.01em;
-  transition: color 0.2s ease;
+  letter-spacing: 0;
+  transition: background 0.2s ease, color 0.2s ease;
   box-shadow: none;
-  position: relative;
-}
-.profile-links a + a::before {
-  content: '';
-  position: absolute;
-  left: -14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 11px;
-  background: var(--hairline);
 }
 .profile-links a:hover {
+  background: var(--accent-soft);
   color: var(--accent-dark);
-  background: transparent;
-  transform: none;
-  box-shadow: none;
 }
 
 /* ---------- News List ---------- */
@@ -295,18 +293,18 @@ em {
   padding: 0;
 }
 .news-list li {
-  padding: 9px 0;
+  padding: 9px 0 9px 108px;
   position: relative;
   border-bottom: 1px solid var(--hairline-soft);
   font-size: 13.5px;
   line-height: 1.6;
-  display: flex;
-  gap: 14px;
 }
 .news-list li:last-child { border-bottom: none; }
 .news-list li::before { display: none; }
 .news-list li b {
-  flex: 0 0 auto;
+  position: absolute;
+  left: 0;
+  top: 10px;
   color: var(--ink-faint);
   font-size: 12px;
   font-weight: 500;
@@ -315,9 +313,7 @@ em {
   background: transparent;
   padding: 0;
   border-radius: 0;
-  margin-right: 0;
-  min-width: 92px;
-  padding-top: 1px;
+  margin: 0;
 }
 
 /* ---------- Paper / Project Rows ---------- */
