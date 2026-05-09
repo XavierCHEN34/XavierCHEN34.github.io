@@ -269,6 +269,14 @@ em {
   color: #4A2C1A;
 }
 
+/* GitHub star badges (auto-fetched from shields.io) */
+.gh-stars {
+  vertical-align: -3px;
+  height: 17px;
+  margin-left: 2px;
+  border-radius: 3px;
+}
+
 /* ---------- Profile Links ---------- */
 .profile-links {
   text-align: center;
@@ -360,10 +368,12 @@ em {
   position: absolute;
   top: 0; left: 0;
   line-height: 0;
+  opacity: 0;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
 }
+.paper-row:hover .two { opacity: 1; }
 .two img {
   width: 220px;
   height: auto;
