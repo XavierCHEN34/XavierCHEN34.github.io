@@ -271,10 +271,14 @@ em {
 
 /* GitHub star badges (auto-fetched from shields.io) */
 .gh-stars {
-  vertical-align: -3px;
-  height: 17px;
-  margin-left: 2px;
+  vertical-align: middle;
+  height: 18px;
+  margin: 0 2px 0 4px;
   border-radius: 3px;
+  /* Nudge text baseline metrics: most fonts sit slightly above optical
+     middle, so a 1px down-shift lines up the badge with the link text. */
+  position: relative;
+  top: -1px;
 }
 
 /* ---------- Profile Links ---------- */
