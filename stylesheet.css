@@ -262,6 +262,13 @@ em {
 /* The centered name and the profile-links row have inline text-align:center
    already, so they override the rule above and stay centered. */
 
+/* Call-to-action — only the trailing email/contact phrase is emphasized
+   (deep coffee brown + bold). The rest of the paragraph stays normal. */
+.bio-cta strong {
+  font-weight: 600;
+  color: #4A2C1A;
+}
+
 /* ---------- Profile Links ---------- */
 .profile-links {
   text-align: center;
