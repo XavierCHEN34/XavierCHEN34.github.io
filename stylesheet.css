@@ -1,5 +1,5 @@
 /* ============================================================
-   Xi CHEN — Academic Homepage  |  Claude-inspired warm palette
+   Xi CHEN — Academic Homepage  |  Indigo academic palette
    ============================================================ */
 
 /* ---------- Fonts ---------- */
@@ -55,36 +55,39 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* ---------- Design Tokens (Claude-inspired warm palette) ---------- */
+/* ---------- Design Tokens (Indigo academic palette) ---------- */
 :root {
-  /* Brand accent — Claude's signature warm clay/terracotta */
-  --accent:        #C96442;   /* clay */
-  --accent-dark:   #A04E32;
-  --accent-soft:   #EFE0D6;   /* tinted parchment */
-  --accent-xsoft:  #F6ECE3;
-  --accent-glow:   rgba(201, 100, 66, 0.18);
+  /* Brand accent — muted Oxford / slate blue (calm, low-saturation) */
+  --accent:        #2B86C5;   /* brighter ocean blue (hover) */
+  --accent-dark:   #1F6FB2;   /* clear, legible blue (links) */
+  --accent-soft:   #DEE5EC;   /* neutral cool wash */
+  --accent-xsoft:  #EFF2F5;
+  --accent-glow:   rgba(52, 82, 122, 0.16);
 
-  /* Warm neutrals — Claude paper / ink */
-  --paper:         #F4EFE6;   /* page background */
-  --paper-2:       #EBE3D5;   /* deeper warm tint for gradient */
-  --paper-3:       #E4D9C5;   /* subtle accent for blur richness */
-  --card:          #FBF7F0;   /* card surface (opaque fallback) */
-  --ink:           #2B2620;   /* primary text */
-  --ink-soft:      #5C5247;   /* muted text */
-  --ink-faint:     #8A7E70;   /* very muted */
-  --hairline:      rgba(43, 38, 32, 0.10);
-  --hairline-soft: rgba(43, 38, 32, 0.06);
+  /* Cool neutrals — clean paper / ink */
+  --paper:         #FBFBFD;   /* page background */
+  --paper-2:       #F2F3F8;   /* deeper cool tint for gradient */
+  --paper-3:       #E8EAF2;   /* subtle accent for blur richness */
+  --card:          #FFFFFF;   /* card surface (opaque fallback) */
+  --ink:           #1A1D24;   /* primary text */
+  --ink-soft:      #4A4F5C;   /* muted text */
+  --ink-faint:     #868C99;   /* very muted */
+  --hairline:      rgba(26, 29, 36, 0.10);
+  --hairline-soft: rgba(26, 29, 36, 0.06);
 
   /* Surfaces */
-  --bg-hover:      #F1E9DC;
+  --bg-hover:      #F4F6F8;
 
   /* Highlights */
   --amber:         #C9892D;
   --red-vivid:     #B0432A;
 
+  /* Type families */
+  --sans:          'Inter', 'Lato', Verdana, Helvetica, sans-serif;
+
   --radius:        14px;
-  --shadow-card:   0 12px 40px rgba(60, 38, 20, 0.10),
-                   0 2px 10px  rgba(60, 38, 20, 0.05);
+  --shadow-card:   0 12px 40px rgba(26, 35, 70, 0.10),
+                   0 2px 10px  rgba(26, 35, 70, 0.05);
 }
 
 /* ---------- Base ---------- */
@@ -118,7 +121,7 @@ body, td, th, tr, p, a {
   backdrop-filter: saturate(180%) blur(18px);
   -webkit-backdrop-filter: saturate(180%) blur(18px);
   border-bottom: 1px solid var(--hairline);
-  box-shadow: 0 1px 12px rgba(60, 38, 20, 0.04);
+  box-shadow: 0 1px 12px rgba(26, 35, 70, 0.04);
 }
 .topnav-inner {
   max-width: 960px;
@@ -179,7 +182,7 @@ strong {
 /* Section headings — confident, sentence-case, hairline divider underneath */
 heading {
   display: block;
-  font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: var(--sans);
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.018em;
@@ -194,7 +197,7 @@ heading {
 /* Paper titles */
 papertitle {
   display: block;
-  font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: var(--sans);
   font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
@@ -209,7 +212,7 @@ a:hover papertitle {
 /* Name / title */
 name {
   display: block;
-  font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: var(--sans);
   font-size: 38px;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -242,14 +245,14 @@ em {
   margin: 0 auto;
   border-radius: 16px;
 
-  /* No frosted glass, no gradient. Just a single very subtle warm tint
+  /* No frosted glass, no gradient. Just a single very subtle cool tint
      — practically white, with a whisper of paper underneath. */
-  background: #FCFAF6;
+  background: #FCFCFE;
 
   /* One hairline border, one diffuse shadow. That's it. */
-  border: 1px solid rgba(43, 38, 32, 0.07);
-  box-shadow: 0 1px 2px rgba(43, 38, 32, 0.03),
-              0 20px 50px -20px rgba(43, 38, 32, 0.10);
+  border: 1px solid rgba(26, 29, 36, 0.07);
+  box-shadow: 0 1px 2px rgba(26, 35, 70, 0.03),
+              0 20px 50px -20px rgba(26, 35, 70, 0.12);
 }
 
 /* ---------- Bio prose: justify both edges ---------- */
@@ -266,7 +269,7 @@ em {
    (deep coffee brown + bold). The rest of the paragraph stays normal. */
 .bio-cta strong {
   font-weight: 600;
-  color: #4A2C1A;
+  color: var(--accent-dark);
 }
 
 /* GitHub star badges (auto-fetched from shields.io) */
@@ -393,20 +396,20 @@ em {
 .profile-photo {
   border: 3px solid rgba(255, 255, 255, 0.8) !important;
   box-shadow:
-    0 0 0 1px rgba(60, 38, 20, 0.08),
-    0 10px 28px rgba(60, 38, 20, 0.20) !important;
+    0 0 0 1px rgba(26, 35, 70, 0.08),
+    0 10px 28px rgba(26, 35, 70, 0.20) !important;
   transition: transform 0.4s ease, box-shadow 0.4s ease !important;
 }
 .profile-photo:hover {
   transform: scale(1.04);
   box-shadow:
-    0 0 0 1px rgba(60, 38, 20, 0.10),
-    0 14px 36px rgba(60, 38, 20, 0.28) !important;
+    0 0 0 1px rgba(26, 35, 70, 0.10),
+    0 14px 36px rgba(26, 35, 70, 0.28) !important;
 }
 
 /* ---------- Highlight Spans ---------- */
 span.highlight {
-  background-color: #FBE9C9;
+  background-color: #FFF3C4;
   padding: 0 3px;
   border-radius: 3px;
 }
